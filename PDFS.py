@@ -1,5 +1,5 @@
 import streamlit as st
-from dotenv import load_dotenv
+# from dotenv import load_dotenv
 from PyPDF2 import PdfReader
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_community.embeddings import HuggingFaceEmbeddings
@@ -9,8 +9,8 @@ from langchain_classic.memory.buffer import ConversationBufferMemory
 from langchain_classic.chains.conversational_retrieval.base import ConversationalRetrievalChain
 import os
 from htmlTemplates import css 
-load_dotenv()
-OpenRoute_Api = os.getenv("OpenRoute_Api")
+# load_dotenv()
+# OpenRoute_Api = os.getenv("OpenRoute_Api")
 
 def get_pdf_text(pdf_docs):
     text = ""
@@ -37,7 +37,7 @@ def get_vectorstore(text_chunks):
 def get_conversation_chain(vectorstore):
     llm = ChatOpenAI(
         base_url="https://openrouter.ai/api/v1",
-        api_key=OpenRoute_Api,
+        api_key="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",
         model="kwaipilot/kat-coder-pro:free", 
         temperature=0.7,
     )
@@ -76,7 +76,7 @@ def load_css():
         """
 
 def main():
-    load_dotenv()
+    # load_dotenv()
     st.set_page_config(
         page_title="PDF AI Assistant",
         page_icon="🤖",
