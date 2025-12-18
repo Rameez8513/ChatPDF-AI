@@ -12,7 +12,7 @@ ChatPDF AI is an advanced, multi-PDF conversational assistant that revolutionize
 
 
 
-## **How It Works **
+## How It Works 
 
 1. **Upload PDFs** - Drag and drop your PDF files
 2. **Ask Questions** - Type questions like "What's the main point?" or "Find information about..."
