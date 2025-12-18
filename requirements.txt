@@ -11,4 +11,7 @@ langchain-community
 langchain-openai
 langchain-classic
 faiss-cpu
+sentence-transformers
+torch
+transformers
 
