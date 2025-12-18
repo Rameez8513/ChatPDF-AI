@@ -4,3 +4,11 @@ openai
 python-dotenv
 PyPDF2
 faiss-cpu
+streamlit
+PyPDF2
+langchain-text-splitters
+langchain-community
+langchain-openai
+langchain-classic
+faiss-cpu
+
