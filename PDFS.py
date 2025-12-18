@@ -10,7 +10,7 @@ from langchain_classic.chains.conversational_retrieval.base import Conversationa
 import os
 from htmlTemplates import css 
 # load_dotenv()
-OpenRoute_Api = st.secrets["OpenRoute_Api"]
+OpenRoute_Api = st.secrets["OPENROUTE_API_KEY"]
 
 def get_pdf_text(pdf_docs):
     text = ""
