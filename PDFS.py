@@ -9,8 +9,8 @@ from langchain_classic.memory.buffer import ConversationBufferMemory
 from langchain_classic.chains.conversational_retrieval.base import ConversationalRetrievalChain
 import os
 from htmlTemplates import css 
-# load_dotenv()
-# OpenRoute_Api = st.secrets["OPENROUTE_API_KEY"]
+
+OpenRoute_Api = st.secrets["OPENROUTE_API"]
 
 def get_pdf_text(pdf_docs):
     text = ""
@@ -37,7 +37,7 @@ def get_vectorstore(text_chunks):
 def get_conversation_chain(vectorstore):
     llm = ChatOpenAI(
         base_url="https://openrouter.ai/api/v1",
-        api_key="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",
+        api_key=OpenRoute_Api,
         model="kwaipilot/kat-coder-pro:free", 
         temperature=0.7,
     )
